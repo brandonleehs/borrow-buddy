@@ -1,8 +1,8 @@
-# BorrowBuddy – User Stories and Borrow-Lending Flow
+# Lendly – User Stories and Borrow-Lending Flow
 
 ## Overview
 
-**BorrowBuddy** is a web platform where users can list items for lending and borrow items from others.
+**Lendly** is a web platform where users can list items for lending and borrow items from others.
 
 - Borrowers deposit a refundable security amount (based on item value or lender preference).
 - Lenders get notified of borrow requests and approve or deny them.

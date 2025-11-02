@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "borrow-buddy": {
+    "lendly": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -26,9 +26,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
@@ -63,10 +61,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "borrow-buddy:build:production"
+              "buildTarget": "lendly:build:production"
             },
             "development": {
-              "buildTarget": "borrow-buddy:build:development"
+              "buildTarget": "lendly:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,9 +83,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ]
+            "styles": ["src/styles.scss"]
           }
         }
       }

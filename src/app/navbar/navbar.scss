@@ -15,11 +15,19 @@
   gap: 0.25rem;
 }
 
-.menu {
+.menu-button {
   cursor: pointer;
   margin-right: 0.5rem;
   padding: 0.25rem;
   border-radius: var(--rounded);
+
+  &+.menu__items {
+    display: none;
+  }
+
+  &--open+.menu__items {
+    display: block;
+  }
 
   // Show closed icon when open
   &--open .burger-icon {
@@ -42,4 +50,8 @@
   &:active {
     background-color: var(--color-gray-200);
   }
+}
+
+.menu__items {
+  display: absolute;
 }

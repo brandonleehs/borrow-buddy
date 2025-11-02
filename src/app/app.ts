@@ -9,5 +9,5 @@ import { Navbar } from './navbar/navbar';
   styleUrls: ['./app.scss'],
 })
 export class App {
-  protected readonly title = signal('borrow-buddy');
+  protected readonly title = signal('lendly');
 }
