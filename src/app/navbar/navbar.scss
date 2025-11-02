@@ -3,6 +3,10 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
 }
 
 .brand {
@@ -15,7 +19,22 @@
   gap: 0.25rem;
 }
 
-.menu-button {
+.menu {
+  position: relative;
+}
+
+.burger-icon,
+.close-icon {
+  transition: all .25s ease-in-out;
+
+}
+
+// We need to remove one icon from the flow for the animation to work
+.burger-icon {
+  position: absolute;
+}
+
+.menu__button {
   cursor: pointer;
   margin-right: 0.5rem;
   padding: 0.25rem;
@@ -26,21 +45,19 @@
   }
 
   &--open+.menu__items {
-    display: block;
+    display: flex;
   }
 
   // Show closed icon when open
   &--open .burger-icon {
-    display: none;
+    transform: rotate(90deg) scale(0);
+    opacity: 0;
   }
 
   // Show burger icon when closed
-  & .close-icon {
-    display: none;
-  }
-
-  &--open .close-icon {
-    display: block;
+  &:not(&--open) .close-icon {
+    transform: rotate(-90deg) scale(0);
+    opacity: 0;
   }
 
   &:hover {
@@ -53,5 +70,36 @@
 }
 
 .menu__items {
-  display: absolute;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem;
+  border-radius: var(--rounded-md);
+  font-size: var(--text-sm);
+  box-shadow: var(--shadow-md);
+  top: 2.5rem;
+  right: 0rem;
+  min-width: 300px;
+  background-color: white;
+  border: 1px solid var(--color-neutral-200);
+  z-index: 100;
+
+  & a {
+    padding: 0.375rem 0.5rem;
+    border-radius: var(--rounded-md);
+  }
+
+  & a:hover {
+    background-color: var(--color-gray-50);
+
+  }
+
+  & a:active {
+    background-color: var(--color-gray-100);
+  }
+}
+
+.menu__separator {
+  margin: 0.25rem 0 0.25rem;
+  border: 1px solid var(--color-gray-100);
 }

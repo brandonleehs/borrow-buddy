@@ -21,8 +21,8 @@
     <p>Lendly</p>
   </div>
 
-  <div>
-    <button class="menu-button" [class.menu--open]="open()" (click)="toggleMenu()">
+  <div class="menu">
+    <button class="menu__button" [class.menu__button--open]="open()" (click)="toggleMenu()">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -58,6 +58,12 @@
     </button>
     <section class="menu__items">
       <a routerLink="/">Home</a>
+      <a routerLink="/">Browse</a>
+      <a routerLink="/">About</a>
+      <a routerLink="/">Contact</a>
+      <div class="menu__separator"></div>
+      <a routerLink="/">Login</a>
+      <a routerLink="/">Sign up</a>
     </section>
   </div>
 </nav>
