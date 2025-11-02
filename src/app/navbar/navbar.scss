@@ -1,0 +1,45 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+}
+
+.brand {
+  color: var(--color-blue-600);
+  font-size: var(--text-lg);
+  font-weight: var(--font-medium);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.menu {
+  cursor: pointer;
+  margin-right: 0.5rem;
+  padding: 0.25rem;
+  border-radius: var(--rounded);
+
+  // Show closed icon when open
+  &--open .burger-icon {
+    display: none;
+  }
+
+  // Show burger icon when closed
+  & .close-icon {
+    display: none;
+  }
+
+  &--open .close-icon {
+    display: block;
+  }
+
+  &:hover {
+    background-color: var(--color-gray-100);
+  }
+
+  &:active {
+    background-color: var(--color-gray-200);
+  }
+}
