@@ -39,7 +39,7 @@
         <path d="m6 6 12 12" />
       </svg>
     </button>
-    <section class="menu__items">
+    <section class="menu__items" [attr.data-open]="open()" [attr.data-closed]="closed()">
       <a routerLink="/">Home</a>
       <a routerLink="/">Browse</a>
       <a routerLink="/">About</a>

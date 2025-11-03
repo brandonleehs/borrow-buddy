@@ -10,8 +10,10 @@ import { signal } from '@angular/core';
 })
 export class Navbar {
   open = signal(false);
+  closed = signal(false);
 
   toggleMenu() {
     this.open.update((isOpen) => !isOpen);
+    this.closed.set(!this.open());
   }
 }
