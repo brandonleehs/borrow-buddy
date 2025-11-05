@@ -5,13 +5,12 @@ import {
   ReactiveFormsModule,
   ValidationErrors,
   ValidatorFn,
-  FormsModule,
 } from '@angular/forms';
 import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
-  imports: [ReactiveFormsModule, FormsModule],
+  imports: [ReactiveFormsModule],
   templateUrl: './login.html',
   styleUrl: './login.scss',
 })
