@@ -6,11 +6,12 @@ import {
   ValidationErrors,
   ValidatorFn,
 } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterLink],
   templateUrl: './login.html',
   styleUrl: './login.scss',
 })
